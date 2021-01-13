@@ -40,11 +40,11 @@
         },
 
         addItem: function (widgetOptions, e, $elem) {
-           _addItem(widgetOptions, e, $elem);
+            _addItem(widgetOptions, e, $elem);
         },
 
         deleteItem: function (widgetOptions, e, $elem) {
-           _deleteItem(widgetOptions, e, $elem);
+            _deleteItem(widgetOptions, e, $elem);
         },
 
         updateContainer: function () {
@@ -197,9 +197,9 @@
 
                     widgetsOptions = widgetsOptions.reverse();
                     for (var i = identifiers.length - 1; i >= 1; i--) {
-                     console.log(,$elem.closest(widgetsOptions[i]));
+              
                         if(widgetsOptions[i])
-                        identifiers.push($elem.closest(widgetsOptions[i].widgetItem).index());
+                            identifiers.push($elem.closest(widgetsOptions[i].widgetItem).index());
                     }
                 }
 
@@ -216,7 +216,7 @@
                 $(this).removeClass('field-' + id).addClass('field-' + newID);
             });
             // update "for" attribute
-            $elem.closest(widgetOptions.widgetItem).find("label[for='" + id + "']").attr('for',newID); 
+            $elem.closest(widgetOptions.widgetItem).find("label[for='" + id + "']").attr('for',newID);
         }
 
         return newID;
@@ -425,10 +425,10 @@
         if ($hasDepdrop.length > 0) {
             $hasDepdrop.each(function() {
                 if ($(this).data('select2') === undefined) {
-                     $(this).removeData().off();
-                     $(this).unbind();
-                     _restoreKrajeeDepdrop($(this));
-                  }
+                    $(this).removeData().off();
+                    $(this).unbind();
+                    _restoreKrajeeDepdrop($(this));
+                }
                 var configDepdrop = eval($(this).attr('data-krajee-depdrop'));
                 $(this).depdrop(configDepdrop);
             });
