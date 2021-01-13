@@ -197,8 +197,9 @@
 
                     widgetsOptions = widgetsOptions.reverse();
                     for (var i = identifiers.length - 1; i >= 1; i--) {
-                     console.log(widgetsOptions[i],$elem.closest(widgetsOptions[i]));
-                        identifiers[i] = $elem.closest(widgetsOptions[i].widgetItem).index();
+                     console.log(,$elem.closest(widgetsOptions[i]));
+                        if(widgetsOptions[i])
+                        identifiers.push($elem.closest(widgetsOptions[i].widgetItem).index());
                     }
                 }
 
